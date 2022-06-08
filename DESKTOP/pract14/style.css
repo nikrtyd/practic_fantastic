@@ -1,0 +1,74 @@
+html,
+body,
+#container,
+#controls {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+}
+
+#container .photo {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(.95);
+  transition: all .5s ease;
+}
+
+#container .photo.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+#container .photo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#controls button {
+  background: rgba(255, 255, 255, .5);
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 3rem;
+  height: 3rem;
+  padding: 12px 10px;
+}
+
+#controls button img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#prev {
+  left: 1rem;
+}
+
+#next {
+  right: 1rem;
+}
+
+#prev img {
+  transform: rotate(180deg);
+}

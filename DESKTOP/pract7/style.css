@@ -1,0 +1,62 @@
+p {
+  padding: 1rem;
+  position: relative;
+  font-size: 2rem;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+p::before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .5;
+  background-size: contain;
+  animation: bg_animation 20s infinite linear;  
+}
+
+p:first-child::before {
+  background-image: url('https://icdn.lenta.ru/images/2018/01/22/19/20180122191537080/detail_3e5ae45d5cbefca6bd3ff33260abdc73.jpg');
+}
+
+p:nth-child(2)::before {
+  background-image: url('https://ribalych.com/media/31120/1401.jpg');
+}
+
+p:nth-child(3)::before {
+  background-image: url('https://i.pinimg.com/236x/9e/92/e3/9e92e3d3111633fe7de83b0e55628166.jpg');
+}
+
+p:hover {
+  color: #fff;
+}
+
+p:hover::before {
+  opacity: 1;
+}
+
+p:active {
+  opacity: .75;
+}
+
+p {
+  transition: opacity .25s ease, color .5s ease;
+}
+
+p::before {
+  transition: all .5s cubic-bezier(.85, .1, .12, 1);
+}
+
+@keyframes bg_animation {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -500px;
+  }
+}

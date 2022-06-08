@@ -1,0 +1,56 @@
+.flex_row {
+  height: 33.3vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex_row.center {
+  justify-content: space-around;
+}
+
+.flex_row img {
+  max-height: 100;
+}
+
+#grid {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: repeat(3, 33.3vh);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#grid img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#p1 {
+  grid-column: 1 / span 2;
+  object-fit: contain;
+  grid-row: 1 / span 2;
+  height: 100%;
+}
+
+#p2 {
+  grid-column-start: 3;
+}
+
+#p3 {
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+
+#p4 {
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+
+#p5 {
+  grid-row-start: 3;
+  grid-column-start: 3;
+}
+
+#p6 {
+  grid-row-start: 2;
+  grid-column-start: 3;
+}
