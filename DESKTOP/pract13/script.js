@@ -44,7 +44,7 @@ elem('#div').addEventListener('click', function () {
 elem('#pow').addEventListener('click', function () {
   last_number = input.value;
   input.value = '';
-  operation = 'div';
+  operation = 'pow';
 });
 
 elem('#eql').addEventListener('click', function () {
